@@ -55,7 +55,7 @@
                 <a href="https://shrinking-world.com/unc/bacs350">Sensei Server</a>
             </li>
             <li>
-                <a href="https://github.com/KevinBRitter/UNC-BACS350-Demo">Github</a>
+                <a href="https://github.com/KevinBRitter/bacs350Public">Github</a>
             </li>
         </ul>
         <h3>Subscribers List</h3>
