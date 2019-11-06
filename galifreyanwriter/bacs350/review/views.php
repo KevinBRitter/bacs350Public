@@ -9,17 +9,13 @@
             <!DOCTYPE html>
             <html lang="en">
                 <head>
-
                     <meta charset="UTF-8">
                     <title>' . $page_title . '</title>
-
                     <link rel="icon" type="image/x-icon" href="/bacs350/favicon.ico">
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
                     <link rel="stylesheet" href="style.css">
-
                 </head>
                 <body>
-
                     <header>
                         <div class="container-fluid">
                             <div class="row">
@@ -31,24 +27,19 @@
                                     <div class="pull-right">
                                         <img class="img-rounded img-responsive"
                                         src="/bacs350/images/Bear.200.png"
-                                        alt="UNC Bear" width="150px">
+                                        alt="UNC Bear" width="150">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </header>
-
                     <main>
-
                         ' . $content . '
-
                     </main>
                 </body>
             </html>
         ';
-
     }
-
 
     /*
         render_card -- build HTML text for a card
@@ -66,7 +57,6 @@
                 </div>
             </div>
         ';
-
     }
 
     /*
