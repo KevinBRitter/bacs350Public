@@ -3,11 +3,7 @@
     // Connect to Bluehost database 
     function subscriber_database() {
         try {
-            $port = '3306';
-            $dbname = 'layzqfmy_subscribers';
-            $db_connect = "mysql:host=localhost:$port;dbname=$dbname";
-            $username = 'layzqfmy_350';
-            $password = 'password_350';
+            require_once 'secret_settings.php';
             return new PDO($db_connect, $username, $password);
         } catch (PDOException $e) {
             $error_message = $e->getMessage();
