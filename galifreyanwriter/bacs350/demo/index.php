@@ -110,6 +110,15 @@
             <li>
                 <a href="30">Demo #30 - MVC Pattern</a>
             </li>
+            <li>
+                <a href="31">Demo #31 - Slides</a>
+            </li>
+            <li>
+                <a href="32">Demo #32 - Notes MVC</a>
+            </li>
+            <li>
+                <a href="35">Demo #35 - User Authentication</a>
+            </li>
         </ul>
     ';
 
