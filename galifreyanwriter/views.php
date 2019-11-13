@@ -18,6 +18,7 @@
                     <link rel="icon" type="image/x-icon" href="/images/R_favicon.png">
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
                     <link rel="stylesheet" href="/bacs350/unc.css">
+                    <link rel="stylesheet" href="/myStyle.css">
 
                 </head>
                 <body>
