@@ -1,5 +1,9 @@
 <?php
 
+    header("Pragma: no-cache");
+    header("Expires: 0");
+    header("Cache-Control: no-store, no-cache, must-revalidate");
+
     /*
         Create page content by rendering a template.
     */

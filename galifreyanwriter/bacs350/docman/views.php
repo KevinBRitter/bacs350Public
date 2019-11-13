@@ -1,5 +1,9 @@
 <?php
 
+    header("Pragma: no-cache");
+    header("Expires: 0");
+    header("Cache-Control: no-store, no-cache, must-revalidate");
+
     // render_list -- Create a bullet list in HTML
     function render_list($list) {
         $s = '<ul>';

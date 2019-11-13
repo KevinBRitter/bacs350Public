@@ -1,6 +1,10 @@
 <!--New code for skill#7-->
 <?php
 
+    header("Pragma: no-cache");
+    header("Expires: 0");
+    header("Cache-Control: no-store, no-cache, must-revalidate");
+
     // Connect to the subscribers database at Bluehost via subscriber.php
     require 'subscriber.php';
 
