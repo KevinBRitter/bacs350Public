@@ -1,9 +1,5 @@
 <?php
 
-    header("Pragma: no-cache");
-    header("Expires: 0");
-    header("Cache-Control: no-store, no-cache, must-revalidate");
-
     /*
         render_page -- build a page with custom settings
     */

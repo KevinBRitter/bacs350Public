@@ -8,6 +8,11 @@
     function render_page($site_title, $page_title, $content) {
         
         return '
+        
+            header("Pragma: no-cache");
+            header("Expires: 0");
+            header("Cache-Control: no-store, no-cache, must-revalidate");
+            
             <!DOCTYPE html>
             <html lang="en">
                 <head>
