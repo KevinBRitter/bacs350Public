@@ -27,6 +27,9 @@
             <li>
                 <a href="02">Project #2 - Page Template</a>
             </li>
+            <li>
+                <a href="../">Built for Class Pages</a>
+            </li>
         </ul>
     ';
 
