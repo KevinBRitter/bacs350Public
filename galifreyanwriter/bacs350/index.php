@@ -37,6 +37,9 @@
             <li>
                 <a href="project">My Projects</a>
             </li>
+            <li>
+                <a href="skills">Skills</a>
+            </li>
         </ul>
         
         <h3>Web Services</h3>
@@ -55,28 +58,22 @@
                 <a href="https://shrinking-world.com/unc/bacs350">Sensei Server</a>
             </li>
             <li>
-                <a href="https://github.com/KevinBRitter/bacs350Public">Github</a>
+                <a href="https://github.com/KevinBRitter/bacs350Public">Galifreyan Writer Github</a>
             </li>
-        </ul>
-        <h3>Subscribers List</h3>
-        
-        <ul>
             <li>
                 <a href="subscriber">Subscribers From SQL</a>
             </li>
-        </ul> 
-        <h3>Super Hero Project</h3>
-        
-        <ul>
             <li>
                 <a href="superhero">Superhero Card Collection</a>
             </li>
-        </ul>    
-        <h3>Notes Database</h3>
-        
-        <ul>
             <li>
-                <a href="notes">See Notes</a>
+                <a href="notes">Notes Collection</a>
+            </li>
+            <li>
+                <a href="slides">Slides Project</a>
+            </li>
+            <li>
+                <a href="review">Reviews Page</a>
             </li>
         </ul>
     ';

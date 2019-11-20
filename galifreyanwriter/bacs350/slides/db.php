@@ -14,8 +14,6 @@
     function remote_connect() {
         // Set up .gitignore to prevent this file in git repo
         require_once 'secret_settings.php';
-
-        $db_connect = "mysql:host=$host:$port;dbname=$dbname";
         return db_connect($db_connect, $username, $password);
     }
 

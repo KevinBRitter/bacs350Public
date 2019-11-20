@@ -14,7 +14,7 @@
                     <meta charset="UTF-8">
                     <title>' . $page_title . '</title>
 
-                    <link rel="icon" type="image/x-icon" href="/bacs350/favicon.ico">
+                    <link rel="icon" type="image/x-icon" href="http://galifreyanwriter.com/images/R_favicon.png">
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
                     <link rel="stylesheet" href="style.css">
 
@@ -31,8 +31,8 @@
                                 <div class="logo col-sm-4">
                                     <div class="pull-right">
                                         <img class="img-rounded img-responsive" 
-                                        src="/bacs350/images/Bear.200.png" 
-                                        alt="UNC Bear" width="150px">
+                                        src="http://galifreyanwriter.com/images/GWLogoKnights.png" 
+                                        alt="Knights Logo" width="150">
                                     </div>
                                 </div>
                             </div>
@@ -40,6 +40,9 @@
                     </header>
 
                     <main>
+                        <p>
+                            <a href="../">Home</a>
+                        </p>
 
                         ' . $content . '
 

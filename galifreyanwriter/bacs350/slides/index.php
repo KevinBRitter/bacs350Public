@@ -23,8 +23,8 @@
     $settings = array(
         "site_title" => "Slide Builder App",
         "page_title" => "Working on reveal js",
-        "logo"       => "Bear.png",
-        "style"      => 'style.css',
+        "logo"       => "http://galifreyanwriter.com/images/GWLogoKnights.png",
+        "style"      => "http://galifreyanwriter.com/myStyle.css",
         "content"    => $content);
 
     //include (dirname(__DIR__).'/views.php');

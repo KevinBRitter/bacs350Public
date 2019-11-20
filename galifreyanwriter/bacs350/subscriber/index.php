@@ -8,7 +8,11 @@
     
     $page_title = 'Subscribers to the SQL';
     
-    $section1 = '<h1>Connect to database</h1>        <p>Subscribers:</p>';
+    $section1 = '
+        <p>
+            <a href="../">Home</a>
+        </p>
+        <h1>Connect to database</h1>        <p>Subscribers:</p>';
     // SQL SELECT
     // Get a list of records into an array
     $subscribers = list_subscribers($db);
