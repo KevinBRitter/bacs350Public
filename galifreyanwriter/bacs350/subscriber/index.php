@@ -27,7 +27,7 @@
     $section6 = '<p>This page was successful. Grats!</p>';
 
     $content = $section1 .'<ul>'.$query1 .'</ul>' .$section6;
-    include (dirname(__DIR__).'/views.php');
+    include (dirname(__DIR__).'../../views.php');
     
     echo render_page($site_title, $page_title, $content);
 

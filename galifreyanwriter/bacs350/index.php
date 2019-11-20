@@ -78,7 +78,7 @@
         </ul>
     ';
 
-    include 'views.php';
+    include (dirname(__DIR__).'/views.php');
     
     echo render_page($site_title, $page_title, $content);
 
