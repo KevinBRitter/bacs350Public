@@ -7,20 +7,19 @@
     
     Usage:
         require_once 'db.php';
-        $db = subscribers_connect();
+        $db = connect_database();
         
 */
-
-    
 
 
     // Connect to the remote database
     function remote_connect() {
-        
-        // Set up .gitignore to prevent this file in git repo
-        require_once 'secret_settings.php';
 
-        $db_connect = "mysql:host=$host:$port;dbname=$dbname";
+        $port = '3306';
+        $dbname = 'uncobacs_subscribers';
+        $db_connect = "mysql:host=localhost:$port;dbname=$dbname";
+        $username = 'uncobacs_350';
+        $password = 'BACS_350';
         return db_connect($db_connect, $username, $password);
 
     }
