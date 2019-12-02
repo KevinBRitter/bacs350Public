@@ -1,12 +1,7 @@
 <?php
-
-    header("Pragma: no-cache");
-    header("Expires: 0");
-    header("Cache-Control: no-store, no-cache, must-revalidate");
-    
     require_once 'log.php';
     require_once 'slides.php';
-    require_once 'views.php';
+    require_once (dirname(__DIR__).'../../views.php');
 
     // Log the page load
     log_page();
@@ -27,8 +22,7 @@
         "style"      => "http://galifreyanwriter.com/myStyle.css",
         "content"    => $content);
 
-    //include (dirname(__DIR__).'/views.php');
-
-    echo render_page($settings);
+//    echo render_page($settings);
+    echo render_page("Slide Builder App", "Working on reveal js", $content);
 
 ?>

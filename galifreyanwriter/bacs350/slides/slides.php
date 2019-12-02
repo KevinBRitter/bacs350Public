@@ -3,7 +3,7 @@
     // Create a database connection
     require_once 'db.php';
     require_once 'log.php';
-    require_once 'views.php';
+    require_once (dirname(__DIR__).'../../views.php');
 
 
     /* ---------------------------

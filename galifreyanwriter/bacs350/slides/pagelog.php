@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'views.php';
+    require_once (dirname(__DIR__).'../../views.php');
     require_once 'log.php';
 
     // Clear the log if requested
@@ -22,7 +22,8 @@
         "page_title" => "Display Pages History",
         "style"      => 'style.css',
         "content"    => $home . $clear . $history);
-
-    echo render_page($settings);
+    $content = $home . $clear . $history;
+//    echo render_page($settings);
+    echo render_page("Galifreyan Writer slides log", "Display Pages History", $content);
 
 ?>

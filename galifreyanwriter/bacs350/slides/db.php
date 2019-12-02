@@ -12,9 +12,14 @@
 
     // Connect to the remote database
     function remote_connect() {
-        // Set up .gitignore to prevent this file in git repo
-        require_once 'secret_settings.php';
-        return db_connect($db_connect, $username, $password);
+        try {
+            require_once (dirname(__DIR__).'../../secret_settings.php');
+            return new PDO($db_connect, $username, $password);
+        } catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            echo "<p>Error: $error_message</p>";
+            die();
+        }
     }
 
     // Local Host Database settings
