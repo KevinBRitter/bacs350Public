@@ -1,7 +1,7 @@
 <?php
 
     // Code to define functions
-    require_once 'views.php';
+    require_once (dirname(__DIR__).'../../views.php');
     require_once 'superhero_views.php';
     require_once 'superhero_db.php';
 

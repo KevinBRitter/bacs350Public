@@ -90,6 +90,23 @@
             </div>
         ';
     }
+    // render_card -- but with images (overloading the function)
+    function render_card($title, $body, $image) {
+        return '
+            <div class="card">
+                <div class="card-header">
+                    ' . $title . '
+                </div>
+                <div class="card-body card-padding">
+
+                    ' . $body . '
+                </div>
+                <div class="card-body card-padding">
+                    <img src="' . $image . '" width="225" height="175">
+                </div>
+            </div>
+        ';
+    }
     // render_markdown -- Read Markdown Text from file and convert into HTML
     function render_markdown($file) {
         $text = file_get_contents($file);

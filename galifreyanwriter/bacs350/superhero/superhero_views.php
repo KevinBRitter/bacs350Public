@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'views.php';
+    require_once (dirname(__DIR__).'../../views.php');
 
     // add_superhero_form -- Create an HTML form to add record.
     function add_superhero_form() {

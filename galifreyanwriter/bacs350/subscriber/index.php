@@ -3,6 +3,7 @@
 
     // Connect to the subscribers database at Bluehost via subscriber.php
     require 'subscriber.php';
+    require_once (dirname(__DIR__).'../../views.php');
 
     $site_title = 'UNC BACS 350';
     
@@ -27,7 +28,6 @@
     $section6 = '<p>This page was successful. Grats!</p>';
 
     $content = $section1 .'<ul>'.$query1 .'</ul>' .$section6;
-    include (dirname(__DIR__).'../../views.php');
     
     echo render_page($site_title, $page_title, $content);
 

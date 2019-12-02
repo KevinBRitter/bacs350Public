@@ -6,7 +6,7 @@
     */
 
     require 'superhero_db.php';
-    include 'views.php';
+    require_once (dirname(__DIR__).'../../secret_settings.php');
 
     // Get a list of records into an array
     $superheros = list_superheros($db);
