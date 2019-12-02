@@ -41,7 +41,27 @@
                 <a href="skills">Skills</a>
             </li>
         </ul>
-        
+        <h3>Brain App for Final</h3>
+        <ul>
+            <li>
+                <a href="finaldocs">Project Plan</a>
+            </li>
+            <li>
+                <a href="subscriber">Subscribers From SQL</a>
+            </li>
+            <li>
+                <a href="superhero">Superhero Card Collection</a>
+            </li>
+            <li>
+                <a href="notes">Notes Collection</a>
+            </li>
+            <li>
+                <a href="slides">Slides Project</a>
+            </li>
+            <li>
+                <a href="review">Reviews Page</a>
+            </li>
+        </ul>
         <h3>Web Services</h3>
         
         <ul>
@@ -60,21 +80,7 @@
             <li>
                 <a href="https://github.com/KevinBRitter/bacs350Public">Galifreyan Writer Github</a>
             </li>
-            <li>
-                <a href="subscriber">Subscribers From SQL</a>
-            </li>
-            <li>
-                <a href="superhero">Superhero Card Collection</a>
-            </li>
-            <li>
-                <a href="notes">Notes Collection</a>
-            </li>
-            <li>
-                <a href="slides">Slides Project</a>
-            </li>
-            <li>
-                <a href="review">Reviews Page</a>
-            </li>
+            
         </ul>
     ';
 

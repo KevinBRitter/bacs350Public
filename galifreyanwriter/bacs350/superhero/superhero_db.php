@@ -4,7 +4,7 @@
     function superheros_database() {
         try {
             $port = '3306';
-            $dbname = 'layzqfmy_superheros';
+            $dbname = 'layzqfmy_final_brain';
             $db_connect = "mysql:host=localhost:$port;dbname=$dbname";
             $username = 'layzqfmy_350';
             $password = 'password_350';

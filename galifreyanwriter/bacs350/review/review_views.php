@@ -1,6 +1,7 @@
 <?php
 
-    require_once 'views.php';
+//    require_once 'views.php';
+    require_once (dirname(__DIR__).'../../views.php');
 
     // add_review_form -- Create an HTML form to add record.
     // Fields: designer, url, report, score, date

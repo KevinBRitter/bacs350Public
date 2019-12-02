@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'views.php';
+    require_once (dirname(__DIR__).'../../views.php');
 
     // Read Markdown Text from file
     $content = render_markdown("Plan.md");

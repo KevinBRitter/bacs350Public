@@ -24,7 +24,7 @@ footer {
 h1 {
     margin: 20px;
     padding: 30px;
-    color: #0B9BE3;
+    color: #273C2C;
     background-color: #273C2C;
     border: 5px solid #939196;
     text-align: center;
@@ -136,7 +136,7 @@ pre {
 
 .card {
     margin: 20px;
-    border: 1px solid #0B9BE3;
+    border: 1px solid #273C2C;
     width: 40%;
 }
 
@@ -144,7 +144,7 @@ pre {
     padding: 10px;
     font-weight: bold;
     color: white;
-    background-color: #0B9BE3;
+    background-color: #273C2C;
 }
 
 .collapse {
