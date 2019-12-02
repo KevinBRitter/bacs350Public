@@ -20,7 +20,7 @@
             </form>
             ';
         $photo = "hero_images/thor_dave_rapoza_deviantart.jpg";
-        return render_card($title, $body, $photo);
+        return render_card_image($title, $body, $photo);
     }
 
 
@@ -39,7 +39,7 @@
                     <tr><td>Weaknesses:</td><td>$hero[weaknesses]</td></tr>
                     <tr><td>Record $hero[id]</td><td>$delete</td></tr>
                 </table>";
-            $html = $html . render_card($title, $body, $photo);
+            $html = $html . render_card_image($title, $body, $photo);
         }
         return $html;
     }

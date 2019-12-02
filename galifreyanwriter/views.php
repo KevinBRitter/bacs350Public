@@ -91,7 +91,7 @@
         ';
     }
     // render_card -- but with images (overloading the function)
-    function render_card($title, $body, $image) {
+    function render_card_image($title, $body, $image) {
         return '
             <div class="card">
                 <div class="card-header">
