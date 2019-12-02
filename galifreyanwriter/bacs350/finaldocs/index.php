@@ -1,7 +1,8 @@
 <?php
 
     // Bring in key functions
-    require 'views.php';
+//    require 'views.php';
+    include (dirname(__DIR__).'../../views.php');
     require 'files.php';
 
 

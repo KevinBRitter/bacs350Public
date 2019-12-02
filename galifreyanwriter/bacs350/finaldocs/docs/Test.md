@@ -26,9 +26,9 @@
 
 ### Process for Review 
 * Design Review Teams
-    * member 1
-    * member 2
-    * member 3
+    * Kevin Ritter
+    * Matthew Bradow - http://matthewbradowwebdesign.com/bacs350/index.php
+    * Devin Pannikkar - http://devin-panikkar.com/bacs350/index.php
 * Initial design review 
 * Designers respond to logged Issues
 * Designers mark issues as fixed
