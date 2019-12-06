@@ -2,7 +2,6 @@
 
     require_once 'db.php';
 
-
     /*
     This code shows how to hook up a logging utility.
 

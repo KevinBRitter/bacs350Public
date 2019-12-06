@@ -10,7 +10,7 @@
 
 
     // Use the views code
-    require_once 'views.php';
+    require_once (dirname(__DIR__).'../../views.php');
 
 
     // Link to Home

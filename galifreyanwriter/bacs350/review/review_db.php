@@ -108,9 +108,9 @@
     ------------------------------- */
 
     // Connect to Bluehost database 
-    function review_database($host, $dbname, $username, $password) {
+    function review_database() {
         try {
-            $db_connect = "mysql:host=$host;dbname=$dbname";
+            require_once (dirname(__DIR__).'../../secret_settings.php');
             return new PDO($db_connect, $username, $password);
         } catch (PDOException $e) {
             $error_message = $e->getMessage();
@@ -119,17 +119,7 @@
         }
     }
 
-    // Connect to the Bluehost database
-    function bluehost_connect() {
-        $dbname = 'layzqfmy_350';
-        $username = 'layzqfmy_350';
-        $password = 'password_350';
-        $port = '3306';
-        $host = "localhost:$port";
-        return review_database($host, $dbname, $username, $password);
-    }
-
     // Create a database connection
-    $db = bluehost_connect(); 
+    $db = review_database(); 
 
 ?>

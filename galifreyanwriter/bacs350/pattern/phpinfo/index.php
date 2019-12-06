@@ -23,7 +23,7 @@
         </ul>
     ';
 
-    include '../../views.php';
+    require_once (dirname(dirname(__DIR__)).'../../views.php');
 
     echo render_page($site_title, $page_title, $content);
 

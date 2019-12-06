@@ -4,7 +4,7 @@
         Render a Card View within a Page
     */
 
-    include 'views.php';
+    require_once (dirname(dirname(__DIR__)).'../../views.php');
 
     $page_title = "Card View Pattern";
     $site_title = 'UNC BACS 350';

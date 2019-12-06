@@ -17,16 +17,13 @@
                 <a href="..">Other Design Patterns</a>
             </li>
             <li>
-                <a href="card_view.html">Simple HTML</a>
-            </li>
-            <li>
                 <a href="card_view.php">PHP Code</a>
             </li>
         </ul>
 
     ';
 
-    include '../../views.php';
+    require_once (dirname(dirname(__DIR__)).'../../views.php');
 
     echo render_page($site_title, $page_title, $content);
 

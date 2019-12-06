@@ -44,7 +44,10 @@
         <h3>Brain App for Final</h3>
         <ul>
             <li>
-                <a href="finaldocs">Project Plan</a>
+                <a href="finaldocs">Project Planner</a>
+            </li>
+            <li>
+                <a href="docman">Docman Project</a>
             </li>
             <li>
                 <a href="subscriber">Subscribers From SQL</a>

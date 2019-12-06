@@ -136,7 +136,7 @@
                     ' . $body . '
                 </div>
                 <div class="card-body card-padding">
-                    <img src="' . $image . '" width="225" height="175">
+                    <img src="' . $image . '" width="225" height="175" alt="' . $title . '">
                 </div>
             </div>
         ';

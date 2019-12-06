@@ -1,9 +1,4 @@
 <?php
-
-    header("Pragma: no-cache");
-    header("Expires: 0");
-    header("Cache-Control: no-store, no-cache, must-revalidate");
-
     /*
         Create page content by rendering a template.
     */
@@ -33,7 +28,7 @@
         </ul>
     ';
 
-    include '../views.php';
+    require_once (dirname(__DIR__).'../../views.php');
     
     echo render_page($site_title, $page_title, $content);
 

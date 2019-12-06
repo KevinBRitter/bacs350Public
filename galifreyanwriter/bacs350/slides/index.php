@@ -1,7 +1,7 @@
 <?php
-    require_once 'log.php';
     require_once 'slides.php';
     require_once (dirname(__DIR__).'../../views.php');
+    require_once (dirname(__DIR__).'../../log.php');
 
     // Log the page load
     log_page();
