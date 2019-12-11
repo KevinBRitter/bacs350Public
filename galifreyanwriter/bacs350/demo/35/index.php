@@ -1,39 +1,39 @@
 <?php
     
-    require_once 'log.php';
-    require_once 'views.php';
-    require_once 'auth.php';
-
+    // Import library code
+    define ('LIB_DIR', $_SERVER['DOCUMENT_ROOT'] . '/bacs350/lib/');
+    require_once LIB_DIR . 'views.php';
+    require_once LIB_DIR . 'log.php';
+    
 
     // Log the page load
-    $log->log_page();
+    log_page();
 
 
     // Display the page content
-    $content = render_button('Templates', '../../templates');
-    $content .= render_button('Solutions', '..');
-    $content .= render_button('Show Log', 'pagelog.php');
+    $buttonbar = '<div><p>' . 
+        render_button('Other Demos', '..') .
+        render_button('Show Log', '/bacs350/lib/pagelog.php') .
+        render_button('PHP Info', '/bacs350/lib/phpinfo.php') .
+        '</p></div>';
 
 
-    $content .= '
-    <h2>Public Page</h2>
+    // Text
+    $text = '
+    <h2>View Library Code</h2>
     <p>
-        This solution demonstrates the use of authentication code.
-        Visiting this page does not require a login.
-
-        <a href="private.php">Private Page</a>
+        This solution demonstrates the reusable view library at  
+        <b>bacs350/lib/views.php</b>.
     </p>
     ';
     
 
     // Create main part of page content
     $settings = array(
-        "site_title" => "System Admins",
-        "page_title" => "User Authentication", 
-        "logo"       => "Bear.png",
-        "style"      => 'style.css',
-        'user'       => user_info(),
-        "content"    => $content);
+        "site_title" => "UNC BACS 350 Demo",
+        "page_title" => "Demo 35 - Views Library", 
+        'user'       => "",
+        "content"    => $buttonbar . $text);
 
     echo render_page($settings);
 

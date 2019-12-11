@@ -59,6 +59,14 @@
                         ' . $content . '
 
                     </main>
+                    <footer>
+                        <a href="https://shrinking-world.com">
+                            <div class="logo-text">Copyright &copy; 2019 Galifreyan Writer</div>
+                            <img class="img-rounded img-responsive" 
+                                        src="http://galifreyanwriter.com/images/GWLogoKnights.png" 
+                                        alt="Knights Logo" width="150">
+                        </a>
+                    </footer>
                 </body>
             </html>
         ';

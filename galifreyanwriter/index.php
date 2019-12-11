@@ -3,6 +3,13 @@
     /*
         Create page content with a template.
     */
+    require_once 'log.php';
+    require_once 'views.php';
+    require_once 'auth.php';
+
+
+    // Log the page load
+    log_page();
 
     $site_title = "Kevin Ritter";
     
@@ -10,7 +17,7 @@
 
     $content = '
         <p>
-            <a href="/bacs350">Home</a>
+            <a href="/bacs350">BACS350 Page</a>
         </p>
         <p> 
             <img src="/images/Profile.png" alt="Kevin Ritter">
@@ -31,8 +38,6 @@
         </ul>
         
     ';
-
-    include 'views.php';
 
     echo render_page($site_title, $page_title, $content);
 

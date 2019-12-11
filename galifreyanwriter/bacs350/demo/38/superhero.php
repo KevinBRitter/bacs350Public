@@ -1,9 +1,9 @@
 <?php
 
     // Create a database connection
-    require_once (dirname(__DIR__).'../../db.php');
-    require_once (dirname(__DIR__).'../../log.php');
-    require_once (dirname(__DIR__).'../../views.php');
+    require_once 'db.php';
+    require_once 'log.php';
+    require_once 'views.php';
 
 
     /* ---------------------------
@@ -11,24 +11,26 @@
      --------------------------- */
 
     // Add a new record
-    function add_slides() {
+    function add_superhero() {
         global $db;
 
         // Pick out the inputs
         $title = filter_input(INPUT_POST, 'title');
         $body = filter_input(INPUT_POST, 'body');
+        $date = filter_input(INPUT_POST, 'date');
 
-        if (!empty($title) && !empty($body)) {
+        if (!empty($title) && !empty($body) && !empty($date)) {
 
             try {
-                $query = "INSERT INTO slides (title, body) VALUES (:title, :body);";
+                $query = "INSERT INTO superheros (title, body, date) VALUES (:title, :body, :date);";
                 $statement = $db->prepare($query);
                 $statement->bindValue(':title', $title);
                 $statement->bindValue(':body', $body);
+                $statement->bindValue(':date', $date);
                 $statement->execute();
                 $statement->closeCursor();
 
-                log_event('Slides CREATE');
+                log_event('Note CREATE');
                 return true;
             } catch (PDOException $e) {
                 $error_message = $e->getMessage();
@@ -40,18 +42,18 @@
 
 
     // Lookup Record using ID
-    function get_slides($id) {
+    function get_superhero($id) {
         global $db;
 
         try {
-            $query = "SELECT * FROM slides WHERE id = :id";
+            $query = "SELECT * FROM superheros WHERE id = :id";
             $statement = $db->prepare($query);
             $statement->bindValue(':id', $id);
             $statement->execute();
             $record = $statement->fetch();
             $statement->closeCursor();
 
-            log_event('Slides READ');                       // READ
+            log_event('Note READ');                       // READ
             return $record;
         } catch (PDOException $e) {
             $error_message = $e->getMessage();
@@ -61,16 +63,16 @@
     }
 
 
-    // Query for all slides
-    function list_slides () {
+    // Query for all superheros
+    function list_superheros () {
         global $db;
 
         try {
-            $query = "SELECT * FROM slides";
+            $query = "SELECT * FROM superheros";
             $statement = $db->prepare($query);
             $statement->execute();
 
-            log_event('Slides READ');                       // READ
+            log_event('Note READ');                       // READ
             return $statement->fetchAll();
         } catch (PDOException $e) {
             $error_message = $e->getMessage();
@@ -82,19 +84,18 @@
 
 
     // Delete Database Record
-    function delete_slides() {
-        global $db;
-
-        $id = filter_input(INPUT_GET, 'id');
+    function delete_superhero() {
+        $id = filter_input(INPUT_POST, 'id');
         if (!empty($id)) {
             try {
-                $query = "DELETE from slides WHERE id = :id";
+                $query = "DELETE from superheros WHERE id = :id";
+                global $db;
                 $statement = $db->prepare($query);
                 $statement->bindValue(':id', $id);
                 $statement->execute();
                 $statement->closeCursor();
 
-                log_event('Slides DELETE');                     // DELETE
+                log_event('Note DELETE');                     // DELETE
                 return true;
             } catch (PDOException $e) {
                 $error_message = $e->getMessage();
@@ -106,29 +107,31 @@
 
 
     // Update the database
-    function update_slides () {
+    function update_superhero () {
         global $db;
 
         // Pick out the inputs
         $id = filter_input(INPUT_POST, 'id');
         $title = filter_input(INPUT_POST, 'title');
         $body = filter_input(INPUT_POST, 'body');
+        $date = filter_input(INPUT_POST, 'date');
 
-        if (!empty($id) && !empty($title) && !empty($body)) {
+        if (!empty($id) && !empty($title) && !empty($body) && !empty($date)) {
 
             try {
                 // Modify database row
-                $query = "UPDATE slides SET title=:title, body=:body WHERE id = :id";
+                $query = "UPDATE superheros SET title=:title, body=:body, date=:date WHERE id = :id";
                 $statement = $db->prepare($query);
 
                 $statement->bindValue(':id', $id);
                 $statement->bindValue(':title', $title);
                 $statement->bindValue(':body', $body);
+                $statement->bindValue(':date', $date);
 
                 $statement->execute();
                 $statement->closeCursor();
 
-                log_event('Slides UPDATE');                     // UPDATE
+                log_event('Note UPDATE');                     // UPDATE
                 return true;
             } catch (PDOException $e) {
                 $error_message = $e->getMessage();
@@ -144,24 +147,39 @@
      --------------------------- */
 
     // Create an HTML list on the output
-    function slides_list_view($slides) {
+    function superhero_list_view($superheros) {
         $html = '';
-        foreach($slides as $row) {
-            $html .= render_template('slides.html', $row);
+        foreach($superheros as $row) {
+            $html .= render_template('superhero.html', $row);
         }
         return $html;
     }
 
-    // add_slides_form -- Create an HTML form to add record.
-    function add_slides_view() {
-        log_event('Slides Add View');                   // Add View
-        return render_template('add.html', array());
+
+    // add_superhero_form -- Create an HTML form to add record.
+    function add_superhero_view() {
+        log_event('Note Add View');                   // Add View
+        $page = $_SERVER['PHP_SELF'];
+        require_login ($page);        
+        return render_template('superhero_add.html', array());
     }
 
+
     // Show form for adding a record
-    function edit_slides_view($record) {
-        log_event('Slides Edit View');                  // Edit View
-        return render_template('edit.html', $record);
+    function edit_superhero_view($record) {
+        log_event('Note Edit View');                  // Edit View
+        $page = $_SERVER['PHP_SELF'];
+        require_login ($page); 
+        return render_template('superhero_edit.html', $record);
+    }
+
+
+    // Show form for adding a record
+    function delete_superhero_view($record) {
+        log_event('Note Edit View');                  // Edit View
+        $page = $_SERVER['PHP_SELF'];
+        require_login ($page); 
+        return render_template('superhero_delete.html', $record);
     }
 
 
@@ -170,17 +188,22 @@
      --------------------------- */
 
     // Handle all action verbs
-    function handle_actions() {
+    function handle_superheros_actions() {
 
         // POST
         $action = filter_input(INPUT_POST, 'action');
         if ($action == 'create') {
-            if (add_slides()) {
+            if (add_superhero()) {
                 header('Location: index.php');
             }
         }
         if ($action == 'update') {
-            if (update_slides()) {
+            if (update_superhero()) {
+                header('Location: index.php');
+            }
+        }
+        if ($action == 'delete') {
+            if (delete_superhero()) {
                 header('Location: index.php');
             }
         }
@@ -188,22 +211,23 @@
         // GET
         $action = filter_input(INPUT_GET, 'action');
         if (empty($action)) {
-            $list = list_slides();
-            return slides_list_view($list);
-        }
-        if ($action == 'delete') {
-            delete_slides();
-            header('Location: index.php');
+            $list = list_superheros();
+            return superhero_list_view($list);
         }
         if ($action == 'add') {
-            return add_slides_view();
+            return add_superhero_view();
+        }
+        if ($action == 'remove') {
+            $id = filter_input(INPUT_GET, 'id');
+            if (! empty($id)) {
+                return delete_superhero_view(get_superhero($id));
+            }
         }
         if ($action == 'edit') {
             $id = filter_input(INPUT_GET, 'id');
             if (! empty($id)) {
-                return edit_slides_view(get_slides($id));
+                return edit_superhero_view(get_superhero($id));
             }
-//            header('Location: index.php');
         }
     }
 

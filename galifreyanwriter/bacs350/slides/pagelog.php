@@ -1,7 +1,7 @@
 <?php
 
     require_once (dirname(__DIR__).'../../views.php');
-    require_once 'log.php';
+    require_once (dirname(__DIR__).'../../log.php');
 
     // Clear the log if requested
     $action = filter_input(INPUT_GET, 'action');

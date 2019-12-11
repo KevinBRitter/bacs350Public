@@ -13,7 +13,7 @@
     // Connect to the remote database
     function remote_connect() {
         try {
-            require_once (dirname(__DIR__).'../../secret_settings.php');
+            require_once 'secret_settings.php';
             return new PDO($db_connect, $username, $password);
         } catch (PDOException $e) {
             $error_message = $e->getMessage();

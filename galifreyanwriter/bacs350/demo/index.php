@@ -122,13 +122,19 @@
             <li>
                 <a href="34">Demo #34 - Notes with Auth</a>
             </li>
+             <li>
+                <a href="35">Demo #35 - View Library</a>
+            </li>
             <li>
-                <a href="templates">Templates from 2018</a>
+                <a href="38">Demo #38 - Code Generator</a>
+            </li>
+            <li>
+                <a href="2018">Templates from 2018</a>
             </li>
         </ul>
     ';
 
-    require_once (dirname(__DIR__).'../../views.php');
+    include '../views.php';
     
     echo render_page($site_title, $page_title, $content);
 
